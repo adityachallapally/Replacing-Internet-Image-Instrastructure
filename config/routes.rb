@@ -1,8 +1,8 @@
 Photogur::Application.routes.draw do
-
+post 'pictures' => "pictures#create" # this is a new line of code
   match 'pictures' => 'pictures#index'
 
-   match 'pictures/:id' => 'pictures:show', as: "picture"
+   match 'pictures/:id' => 'pictures#show', as: "picture"
   
   match 'pictures/new' => 'pictures#new'
 
